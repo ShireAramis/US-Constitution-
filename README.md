@@ -1,5 +1,3 @@
-# US-Constitution-
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +8,8 @@
             margin: 0;
             padding: 0;
             font-family: "Times New Roman", serif;
-            background-color: #f0f0f0; /* Light gray background */
+            background: linear-gradient(to bottom, #b22234, #ffffff, #3c3b6e);
+            background-size: 100% 33.333%;
         }
 
         header {
@@ -62,6 +61,7 @@
         
     </div>
     
-
+   
 </body>
 </html>
+
