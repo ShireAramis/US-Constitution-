@@ -8,8 +8,7 @@
             margin: 0;
             padding: 0;
             font-family: "Times New Roman", serif;
-            background: linear-gradient(to bottom, #b22234, #ffffff, #3c3b6e);
-            background-size: 100% 33.333%;
+            background: linear-gradient(to right, #b22234 50%, #3c3b6e 50%);
         }
 
         header {
@@ -31,13 +30,13 @@
             font-size: 24px;
             margin-bottom: 20px;
             text-align: center;
-            color: #00205b; /* Dark blue heading color */
+            color: #ffffff; /* White heading color */
         }
 
         p {
             font-size: 18px;
             line-height: 1.6;
-            color: #333333; /* Dark gray text color */
+            color: #ffffff; /* White text color */
         }
 
         footer {
@@ -49,6 +48,38 @@
             bottom: 0;
             width: 100%;
         }
+
+        .stars {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .stars:before {
+            content: ' ';
+            display: block;
+            position: absolute;
+            top: -1000px;
+            left: -1000px;
+            width: 3000px;
+            height: 3000px;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none"><text x="50%" y="50%" font-size="50" fill="white" text-anchor="middle">☆</text></svg>');
+            background-size: 50px;
+            animation: twinkle 10s linear infinite;
+        }
+
+        @keyframes twinkle {
+            0% {
+                transform: translateY(-2000px);
+            }
+            100% {
+                transform: translateY(2000px);
+            }
+        }
     </style>
 </head>
 <body>
@@ -58,10 +89,11 @@
     
     <div class="container">
         <p>We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.</p>
-        
+       
     </div>
     
    
+
+    <div class="stars"></div>
 </body>
 </html>
-
